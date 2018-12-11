@@ -37,5 +37,5 @@
 
     - name: testing the web
       uri: 
-       url: http://node2:80
+       url: http://ip-172-31-28-165.ap-south-1.compute.internal:80
        status_code: 200
