@@ -24,13 +24,13 @@
         state: enabled
       
     - name: Deployment of Dockerfile 
-      command: docker build -t web-by-docker /var/lib/jenkins/workspace/CICD\ Cycle/web-tier/.
+      command: docker build -t web-by-docker /var/lib/jenkins/workspace/CICD_Cycle/web-tier/.
 
     - name: application container
       command: docker run -d -p 80:80 --name=webserver web-by-docker
   
     - name: Deployment of mysql container
-      command: docker build -t db-by-docker /var/lib/jenkins/workspace/CICD\ Cycle/db/.
+      command: docker build -t db-by-docker /var/lib/jenkins/workspace/CICD_Cycle/db/.
 
     - name: mysql container 
       command: docker run -d -p 3306:3306 --name=php db-by-docker
